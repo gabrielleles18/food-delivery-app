@@ -1,3 +1,3 @@
 # Food Delivery
 
-![alt text](https://github.com/gabrielleles18/food-delivery-app/blob/master/food-delivery.png?raw=true)
+![image](https://drive.google.com/file/d/1wLYITmTU5B_54rtqAXC2tVh6EQcKR1zr/view?usp=sharing)
