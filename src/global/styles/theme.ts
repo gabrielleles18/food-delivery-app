@@ -6,6 +6,9 @@ export const theme = {
         segondary80: '#FF4B3A',
         segondary20: '#F47B0A',
 
+        gray60: '#919191',
+        gray20: '#F2F2F2',
+
         black: '#000000',
         white: '#FFFFFF'
     },
