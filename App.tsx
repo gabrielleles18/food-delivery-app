@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {View, StatusBar} from 'react-native';
+import {useFonts} from "expo-font";
+import {Singin} from "./src/screens/Singin";
+import AppLoading from "expo-app-loading";
+import {MPLUSRounded1c_800ExtraBold} from '@expo-google-fonts/m-plus-rounded-1c';
+import {MPLUSRounded1c_500Medium} from '@expo-google-fonts/m-plus-rounded-1c';
+import {MPLUSRounded1c_700Bold} from '@expo-google-fonts/m-plus-rounded-1c';
+
+import {styles} from "./styles";
+import {theme} from './src/global/styles/theme';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    const [fontsLoaded] = useFonts({
+        MPLUSRounded1c_800ExtraBold,
+        MPLUSRounded1c_500Medium,
+        MPLUSRounded1c_700Bold
+    });
+
+    if (!fontsLoaded) {
+        return <AppLoading/>
+    }
+
+    return (
+        <View style={styles.container}>
+            <StatusBar
+                barStyle='light-content'
+                backgroundColor={theme.colors.segondary80}
+                translucent
+            />
+            <Singin/>
+        </View>
+    );
+}
