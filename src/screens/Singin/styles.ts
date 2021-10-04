@@ -6,7 +6,7 @@ import {theme} from '../../global/styles/theme';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: getStatusBarHeight() + 20,
+        paddingTop: getStatusBarHeight() + 30,
         backgroundColor: theme.colors.segondary80,
         color: 'red'
     },

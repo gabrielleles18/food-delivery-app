@@ -7,6 +7,7 @@ export const theme = {
         segondary20: '#F47B0A',
 
         gray60: '#919191',
+        gray50: '#A9A9A9',
         gray20: '#F2F2F2',
 
         black: '#000000',

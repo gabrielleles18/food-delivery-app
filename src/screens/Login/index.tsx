@@ -8,7 +8,7 @@ import {Input} from "../../components/Input";
 import {Button} from "../../components/Button";
 
 export function Login() {
-    const [isCheckedLogin, setIsCheckedLogin] = useState(false);
+    const [isCheckedLogin, setIsCheckedLogin] = useState(true);
     const [isCheckedSignUp, setIsCheckedSignUp] = useState(false);
 
     function handleCheckedLogin() {
