@@ -7,8 +7,18 @@ export const styles = StyleSheet.create({
     container: {
         width: '100%',
         flex: 1,
-        paddingTop: getStatusBarHeight() + 30,
-        backgroundColor: theme.colors.gray20,
-        paddingHorizontal: 30
+        paddingTop: getStatusBarHeight(),
+        backgroundColor: theme.colors.gray20
+    },
+    content: {
+        paddingHorizontal: 30,
+        paddingTop: 10
+    },
+    title: {
+        fontSize: 34,
+        color: theme.colors.black,
+        fontFamily: theme.fonts.rounded800,
+        lineHeight: 40,
+        marginBottom: 20
     }
 })

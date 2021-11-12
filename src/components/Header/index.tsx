@@ -22,6 +22,7 @@ export function Header({title, iconLeft, iconRight, color = theme.colors.black}:
                     name={iconLeft}
                     color={theme.colors.black}
                     size={24}
+                    style={styles.icons}
                 />
             </BorderlessButton>
 
@@ -33,6 +34,7 @@ export function Header({title, iconLeft, iconRight, color = theme.colors.black}:
                     // name='basket'
                     color={color}
                     size={24}
+                    style={styles.icons}
                 />
             </BorderlessButton>
         </View>
