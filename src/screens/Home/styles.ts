@@ -20,5 +20,9 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.rounded800,
         lineHeight: 40,
         marginBottom: 20
+    },
+    flatList:{
+        marginTop: 35,
+        marginBottom: 45
     }
 })

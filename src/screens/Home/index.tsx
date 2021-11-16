@@ -1,31 +1,19 @@
 import React, {useState} from "react";
-import {FlatList, Text, View} from "react-native";
+import {Text, View} from "react-native";
 
 import {Header} from "../../components/Header";
-import {Category} from "../../components/Category";
 import {Search} from "../../components/Search";
+import {CategorySelect} from "../../components/CategorySelect";
 import {theme} from "../../global/styles/theme";
 
 import {styles} from "./styles";
-import {EnviromentButton} from "../../../../plant-manager/src/components/EnviromentButton";
 
 export function Home() {
+    const [category, setCategory] = useState('');
 
-
-    const DATA = [
-        {
-            id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-            title: 'First Item',
-        },
-        {
-            id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-            title: 'Second Item',
-        },
-        {
-            id: '58694a0f-3da1-471f-bd96-145571e29d72',
-            title: 'Third Item',
-        },
-    ];
+    function handleCategorySelect(categoryId: string) {
+        setCategory(categoryId);
+    }
 
     return (
         <View style={styles.container}>
@@ -39,17 +27,11 @@ export function Home() {
                 <Text style={styles.title}>
                     Deliciouss {'\n'}Food for you
                 </Text>
-                <Search />
-                <FlatList
-                    data={DATA}
-                    renderItem={({item}) => (
-                        <Category
-                            title={item.title}
-                        />
-                    )}
-                    keyExtractor={item => item.id}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
+                <Search/>
+                <CategorySelect
+                    hasCheckBox
+                    setCategory={handleCategorySelect}
+                    categorySelected={category}
                 />
             </View>
         </View>
