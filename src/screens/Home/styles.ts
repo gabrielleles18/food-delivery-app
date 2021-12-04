@@ -12,7 +12,8 @@ export const styles = StyleSheet.create({
     },
     content: {
         paddingHorizontal: 30,
-        paddingTop: 10
+        paddingTop: 10,
+        paddingBottom: 30,
     },
     title: {
         fontSize: 34,
@@ -21,8 +22,8 @@ export const styles = StyleSheet.create({
         lineHeight: 40,
         marginBottom: 20
     },
-    flatList:{
+    flatList: {
         marginTop: 35,
-        marginBottom: 45
-    }
+        marginBottom: 30
+    },
 })
