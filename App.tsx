@@ -3,6 +3,7 @@ import {View, StatusBar} from 'react-native';
 import {useFonts} from "expo-font";
 import {Login} from "./src/screens/Login";
 import {Singin} from "./src/screens/Singin";
+import {FoodDetails} from "./src/screens/FoodDetails";
 import AppLoading from "expo-app-loading";
 import {MPLUSRounded1c_800ExtraBold} from '@expo-google-fonts/m-plus-rounded-1c';
 import {MPLUSRounded1c_500Medium} from '@expo-google-fonts/m-plus-rounded-1c';
@@ -31,7 +32,7 @@ export default function App() {
                 backgroundColor={theme.colors.segondary80}
                 translucent
             />
-            <Home/>
+            <FoodDetails/>
         </View>
     );
 }
