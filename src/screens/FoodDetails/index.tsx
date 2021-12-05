@@ -4,6 +4,7 @@ import Swiper from "react-native-web-swiper";
 
 import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
+import {Button} from "../../components/Button";
 
 export function FoodDetails() {
 
@@ -23,7 +24,7 @@ export function FoodDetails() {
     ];
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.swiper}>
                 <Swiper
                     from={1}
@@ -48,6 +49,29 @@ export function FoodDetails() {
                     }
                 </Swiper>
             </View>
-        </View>
+            <View style={styles.content}>
+                <Text style={styles.title}>
+                    Veggie tomato mix
+                </Text>
+                <Text style={styles.price}>
+                    N1, 900
+                </Text>
+
+                <View style={styles.info}>
+                    <Text style={styles.infoTitle}>Delivery info</Text>
+                    <Text style={styles.text}>
+                        Delivered between monday aug and thursday 20 from 8pm to 91:32 pm
+                    </Text>
+
+                    <Text style={styles.infoTitle}>Return policy</Text>
+                    <Text style={styles.text}>
+                        All our foods are double checked before leaving our stores so by any case
+                        you found a broken food please contact our hotline immediately.
+                    </Text>
+
+                    <Button title='Add to cart'/>
+                </View>
+            </View>
+        </ScrollView>
     )
 }
