@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Image, ScrollView, Text, TextInput, View} from "react-native";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 import iconPng from '../../assets/icon.png';
 import {styles} from './styles';
@@ -7,7 +8,7 @@ import {LinkPress} from "../../components/LinkPress";
 import {Input} from "../../components/Input";
 import {Button} from "../../components/Button";
 
-export function Login() {
+export function Login({navigation}: NativeStackHeaderProps) {
     const [isCheckedLogin, setIsCheckedLogin] = useState(true);
     const [isCheckedSignUp, setIsCheckedSignUp] = useState(false);
 
@@ -36,7 +37,7 @@ export function Login() {
                 <Input title="Password" type='password'/>
                 {isCheckedSignUp && <Input title="Confirm password" type='password'/>}
                 {isCheckedLogin && <Text style={styles.forgot}>Forgot passcode?</Text>}
-                <Button title='Login'/>
+                <Button title='Login' onPress={() => navigation.navigate('Home')}/>
             </View>
         </ScrollView>
     )
