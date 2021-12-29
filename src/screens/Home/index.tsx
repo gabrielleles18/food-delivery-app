@@ -65,7 +65,7 @@ export function Home() {
                         />
                     )}
                     ItemSeparatorComponent={
-                        () => <View style={{ width: 30, backgroundColor: 'transparent' }}/>
+                        () => <View style={{ width: 20, backgroundColor: 'transparent' }}/>
                     }
                     showsHorizontalScrollIndicator={false}
                 />

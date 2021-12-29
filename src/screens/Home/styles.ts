@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     content: {
         paddingHorizontal: 30,
         paddingTop: 10,
-        paddingBottom: 30,
+        paddingBottom: 20,
     },
     title: {
         fontSize: 34,

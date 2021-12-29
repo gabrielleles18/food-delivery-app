@@ -1,8 +1,35 @@
-import {StyleSheet} from "react-native";
+import {Platform, StyleSheet} from "react-native";
 import {theme} from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-    container: {},
+    container: {
+        padding: 5,
+        paddingBottom: 10
+    },
+    content: {
+        width: 156,
+        borderRadius: 30,
+        alignItems: 'center',
+        backgroundColor: theme.colors.white,
+        overflow: 'hidden',
+        ...Platform.select({
+            ios: {
+                shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+            },
+            android: {
+                elevation: 5
+            },
+            default: {
+                elevation: 5
+            }
+        })
+    },
     image: {
         width: 128,
         height: 128,
@@ -10,16 +37,7 @@ export const styles = StyleSheet.create({
         marginBottom: -80,
         alignSelf: 'center',
         zIndex: 99,
-        shadowOffset:{  width: 10,  height: 10,  },
-        shadowColor: 'black',
-        shadowOpacity: 1.0,
-    },
-    content: {
-        width: 156,
-        borderRadius: 30,
-        alignItems: 'center',
-        backgroundColor: theme.colors.white,
-        overflow: 'hidden'
+        elevation: 5,
     },
     title: {
         fontFamily: theme.fonts.rounded700,

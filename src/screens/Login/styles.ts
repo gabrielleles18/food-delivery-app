@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import {getStatusBarHeight} from "react-native-iphone-x-helper";
 
 import {theme} from '../../global/styles/theme';
@@ -18,11 +18,23 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-
-        // shadowOffset: { height: 3, width: 6 },
-        // shadowRadius: 30,
-        // shadowColor: '#000',
-        // shadowOpacity: 0.3,
+        ...Platform.select({
+            ios: {
+                shadowColor: '#000',
+                shadowOffset: {
+                    width: 0,
+                    height: 6,
+                },
+                shadowOpacity: 0.37,
+                shadowRadius: 7.4
+            },
+            android: {
+                elevation: 12
+            },
+            default: {
+                elevation: 12
+            }
+        })
     },
     image: {
         width: 120,

@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.gray30,
         borderRadius: 30,
         paddingHorizontal: 30,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     icon: {
         padding: 5
