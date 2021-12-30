@@ -4,6 +4,7 @@ import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
 import {Profile} from "../screens/Profile";
 import {FoodDetails} from "../screens/FoodDetails";
+import {Cart} from "../screens/Cart";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
@@ -54,6 +55,7 @@ export function Routes() {
             <Stack.Navigator initialRouteName='Singin'>
                 <Stack.Screen name='Singin' component={Singin} options={{headerShown: false}}/>
                 <Stack.Screen name='Login' component={Login} options={{headerShown: false}}/>
+                <Stack.Screen name='Cart' component={Cart} options={{headerShown: false}}/>
                 <Stack.Screen name='Home' component={Tabs} options={{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>

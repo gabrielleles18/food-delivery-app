@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
         marginBottom: -80,
         alignSelf: 'center',
         zIndex: 99,
-        elevation: 5,
+        // elevation: 5,
     },
     title: {
         fontFamily: theme.fonts.rounded700,

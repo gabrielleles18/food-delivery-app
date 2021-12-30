@@ -11,10 +11,20 @@ type Props = {
     title?: string,
     iconLeft: any,
     iconRight?: any,
-    color?: string
+    color?: string,
+    screenPress: string,
+    navigation: any
 }
 
-export function Header({title, iconLeft, iconRight, color = theme.colors.black}: Props) {
+export function Header(
+    {
+        title,
+        iconLeft,
+        iconRight,
+        screenPress,
+        color = theme.colors.black,
+        navigation
+    }: Props) {
     return (
         <View style={styles.container}>
             <BorderlessButton>
@@ -28,10 +38,11 @@ export function Header({title, iconLeft, iconRight, color = theme.colors.black}:
 
             <Text>{title}</Text>
 
-            <BorderlessButton>
+            <BorderlessButton
+                onPress={() => navigation.navigate(screenPress)}
+            >
                 <SimpleLineIcons
                     name={iconRight}
-                    // name='basket'
                     color={color}
                     size={24}
                     style={styles.icons}
