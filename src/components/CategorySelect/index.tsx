@@ -1,5 +1,5 @@
 import React from "react";
-import {ScrollView} from "react-native";
+import {ScrollView, View} from "react-native";
 
 import {Category} from "../Category";
 
@@ -27,17 +27,19 @@ export function CategorySelect({categorySelected, setCategory, hasCheckBox = fal
             style={styles.container}
             showsHorizontalScrollIndicator={false}
         >
-            {
-                categories.map(category => (
-                    <Category
-                        key={category.id}
-                        title={category.title}
-                        checked={category.id === categorySelected}
-                        onPress={() => setCategory(category.id)}
-                        hasCheckBox={hasCheckBox}
-                    />
-                ))
-            }
+            <View style={styles.content}>
+                {
+                    categories.map(category => (
+                        <Category
+                            key={category.id}
+                            title={category.title}
+                            checked={category.id === categorySelected}
+                            onPress={() => setCategory(category.id)}
+                            hasCheckBox={hasCheckBox}
+                        />
+                    ))
+                }
+            </View>
         </ScrollView>
     )
 

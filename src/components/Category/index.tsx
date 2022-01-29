@@ -13,16 +13,18 @@ type Props = RectButtonProps & {
 
 export function Category({title, checked, ...rest}: Props) {
     return (
-        <RectButton {...rest} >
-            <Text style={[styles.item,
-                checked ? {
-                    color: theme.colors.segondary85,
-                    borderBottomWidth: 3,
-                    borderBottomColor: theme.colors.primary
-                } : {}
-            ]}>
-                {title}
-            </Text>
-        </RectButton>
+        <View style={styles.container}>
+            <RectButton {...rest} rippleColor={theme.colors.gray20}>
+                <Text style={[styles.item,
+                    checked ? {
+                        color: theme.colors.segondary85,
+                        borderBottomWidth: 3,
+                        borderBottomColor: theme.colors.primary
+                    } : {}
+                ]}>
+                    {title}
+                </Text>
+            </RectButton>
+        </View>
     );
 }

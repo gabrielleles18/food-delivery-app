@@ -5,6 +5,22 @@ import {theme} from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
-        paddingTop: getStatusBarHeight()
+        paddingTop: getStatusBarHeight(),
+        paddingHorizontal: 30,
+        paddingBottom: 25,
+    },
+    top:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    image:{
+        width: 15,
+        height: 15
+    },
+    textSwipe:{
+        fontFamily: theme.fonts.rounded600,
+        color: theme.colors.black,
+        fontSize: 10
     }
 })

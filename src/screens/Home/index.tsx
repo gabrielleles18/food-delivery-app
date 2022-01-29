@@ -52,27 +52,29 @@ export function Home({navigation}: NativeStackHeaderProps) {
                     Deliciouss {'\n'}Food for you
                 </Text>
                 <Search/>
-                <CategorySelect
-                    hasCheckBox
-                    setCategory={handleCategorySelect}
-                    categorySelected={category}
-                />
-                <FlatList
-                    data={foods}
-                    keyExtractor={item => item.id}
-                    style={styles.flatList}
-                    horizontal={true}
-                    renderItem={({item}) => (
-                        <Food
-                            data={item}
-                        />
-                    )}
-                    ItemSeparatorComponent={
-                        () => <View style={{width: 20, backgroundColor: 'transparent'}}/>
-                    }
-                    showsHorizontalScrollIndicator={false}
-                />
             </View>
+
+            <CategorySelect
+                hasCheckBox
+                setCategory={handleCategorySelect}
+                categorySelected={category}
+            />
+            <FlatList
+                data={foods}
+                keyExtractor={item => item.id}
+                style={styles.flatList}
+                contentContainerStyle={{paddingHorizontal: 30}}
+                horizontal={true}
+                renderItem={({item}) => (
+                    <Food
+                        data={item}
+                    />
+                )}
+                ItemSeparatorComponent={
+                    () => <View style={{width: 20, backgroundColor: 'transparent'}}/>
+                }
+                showsHorizontalScrollIndicator={false}
+            />
         </ScrollView>
     )
 }

@@ -4,7 +4,7 @@ import {theme} from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         padding: 5,
-        paddingBottom: 10
+        paddingBottom: 60
     },
     content: {
         width: 156,
@@ -14,19 +14,38 @@ export const styles = StyleSheet.create({
         overflow: 'hidden',
         ...Platform.select({
             ios: {
-                shadowColor: "#000",
+                shadowColor: theme.colors.gray20,
                 shadowOffset: {
                     width: 0,
-                    height: 2,
+                    height: 12,
                 },
-                shadowOpacity: 0.25,
-                shadowRadius: 3.84,
+                shadowOpacity: 0.58,
+                shadowRadius: 16.00,
             },
             android: {
-                elevation: 5
+                elevation: 24
             },
             default: {
-                elevation: 5
+                elevation: 24
+            }
+        })
+    },
+    containerImg:{
+        ...Platform.select({
+            ios: {
+                shadowColor: theme.colors.gray20,
+                shadowOffset: {
+                    width: 0,
+                    height: 13,
+                },
+                shadowOpacity: 0.68,
+                shadowRadius: 17.00,
+            },
+            android: {
+                elevation: 30
+            },
+            default: {
+                elevation: 30
             }
         })
     },
@@ -37,7 +56,6 @@ export const styles = StyleSheet.create({
         marginBottom: -80,
         alignSelf: 'center',
         zIndex: 99,
-        // elevation: 5,
     },
     title: {
         fontFamily: theme.fonts.rounded700,

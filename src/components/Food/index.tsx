@@ -19,10 +19,12 @@ export function Food({data, ...rest}: Props) {
 
     return (
         <View style={styles.container}>
-            <Image
-                source={{uri: data.image}}
-                style={styles.image}
-            />
+            <View style={styles.containerImg}>
+                <Image
+                    source={{uri: data.image}}
+                    style={styles.image}
+                />
+            </View>
             <View style={styles.content}>
                 <RectButton {...rest}>
                     <Text style={styles.title}>{data.title}</Text>
