@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import {Image, ScrollView, Text, View, Button} from "react-native";
+import {Image, ScrollView, Text, View, TouchableOpacity} from "react-native";
 import {SwipeListView} from 'react-native-swipe-list-view';
 
 import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
 
 import swipePng from '../../assets/swipe.png';
+import {Feather} from "@expo/vector-icons";
 
 export function Cart() {
     const [counterInput, setCounterInput] = useState(1);
@@ -35,10 +36,11 @@ export function Cart() {
         setCounterInput(counterInput + 1);
     }
 
-    function handleCounterDecrease(counter: number) {
-        setCounterInput(counterInput - 1);
+    function handleCounterDecrease() {
+        if (counterInput > 0) {
+            setCounterInput(counterInput - 1);
+        }
     }
-
 
     return (
         <View style={styles.container}>
@@ -64,15 +66,15 @@ export function Cart() {
                                 <View style={styles.priceAmount}>
                                     <Text style={styles.price}>{data.item.price}</Text>
                                     <View style={styles.amount}>
-                                        <Button
-                                            onPress={() => handleCounterDecrease}
-                                            title='-'
-                                        />
-                                        <Text>{counterInput}</Text>
-                                        <Button
-                                            onPress={() => handleCounterIncrease}
-                                            title='+'
-                                        />
+                                        <TouchableOpacity onPress={handleCounterDecrease} style={styles.button}>
+                                            <Text style={{color: theme.colors.white}}>-</Text>
+                                        </TouchableOpacity>
+
+                                        <Text style={styles.text}>{counterInput}</Text>
+
+                                        <TouchableOpacity onPress={handleCounterIncrease} style={styles.button}>
+                                            <Text style={{color: theme.colors.white}}>+</Text>
+                                        </TouchableOpacity>
                                     </View>
                                 </View>
                             </View>
@@ -81,15 +83,23 @@ export function Cart() {
                 )}
                 renderHiddenItem={(data, rowMap) => (
                     <View style={styles.hiddenItem}>
-                        <View style={styles.heart}>
-                            <Text>A</Text>
-                        </View>
-                        <View style={styles.delete}>
-                            <Text>B</Text>
-                        </View>
+                        <TouchableOpacity style={styles.touchItem}>
+                            <Feather
+                                name="heart"
+                                color={theme.colors.white}
+                                size={20}
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.touchItem, {marginLeft: 15}]}>
+                            <Feather
+                                name="trash-2"
+                                color={theme.colors.white}
+                                size={20}
+                            />
+                        </TouchableOpacity>
                     </View>
                 )}
-                rightOpenValue={-150}
+                rightOpenValue={-130}
             />
         </View>
     )

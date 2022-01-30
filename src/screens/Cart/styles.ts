@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 30,
+        marginTop: 40,
         marginBottom: 20
     },
     image: {
@@ -42,42 +43,49 @@ export const styles = StyleSheet.create({
         borderRadius: 69,
         marginRight: 16
     },
-    content: {
-
-    },
-    title:{
+    content: {},
+    title: {
         fontSize: 17,
         color: theme.colors.black,
         fontFamily: theme.fonts.rounded700,
         marginBottom: 5
     },
-    priceAmount:{
+    priceAmount: {
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
-    price:{
+    price: {
         fontSize: 15,
         color: theme.colors.primary,
         fontFamily: theme.fonts.rounded600,
     },
-    amount:{
-        paddingHorizontal: 5,
+    amount: {
         flexDirection: 'row',
         backgroundColor: theme.colors.primary,
         borderRadius: 5,
         alignItems: 'center',
     },
-    hiddenItem:{
-        paddingHorizontal:30,
+    button: {
+        color: theme.colors.white,
+        paddingHorizontal: 8,
+    },
+    text: {
+        paddingHorizontal: 4,
+        color: theme.colors.white
+    },
+    hiddenItem: {
+        flex: 1,
+        paddingHorizontal: 30,
         flexDirection: 'row',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        alignItems: 'center'
     },
-    counter:{
-    },
-    heart:{
-
-    },
-    delete:{
-
+    touchItem: {
+        width: 45,
+        height: 45,
+        borderRadius: 45,
+        backgroundColor: theme.colors.segondary90,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
