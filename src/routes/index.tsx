@@ -21,7 +21,7 @@ export function Routes() {
                 activeColor={theme.colors.primary}
                 inactiveColor={theme.colors.gray55}
                 labeled={false}
-                barStyle={{backgroundColor: 'transparent'}}
+                barStyle={{backgroundColor: 'green'}}
                 screenOptions={({route}: any) => ({
                     tabBarIcon: ({color}) => {
                         const icons = {
