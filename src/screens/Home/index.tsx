@@ -1,5 +1,5 @@
 import React, {useRef, useState} from "react";
-import {FlatList, ScrollView, SafeAreaView, Text, View, TouchableOpacity, Animated} from "react-native";
+import {FlatList, ScrollView, SafeAreaView, Text, View, TouchableOpacity, Animated, Easing} from "react-native";
 import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {Feather, SimpleLineIcons} from "@expo/vector-icons";
@@ -114,34 +114,36 @@ export function Home({navigation}: NativeStackHeaderProps) {
                 left: 0,
                 right: 0,
                 overflow: 'hidden',
-                paddingTop: showMenu ? 20 : 0,
                 borderRadius: showMenu ? 15 : 0,
                 transform: [
                     {scale: scaleValue},
-                    {translateX: offsetValue}
+                    {translateX: offsetValue},
+                    { rotateY: showMenu ? '-15deg' : '0deg'},
                 ]
             }}>
                 <Animated.View style={{
                     transform: [{
                         translateY: closeButtonOffset
                     }],
+                    bottom: showMenu ? -30 : 0
                 }}>
-                    <ScrollView showsVerticalScrollIndicator={false}>
+                    <ScrollView showsVerticalScrollIndicator={false} scrollEnabled={!showMenu}>
                         <View style={styles.header}>
                             <TouchableOpacity onPress={() => {
                                 // Do Actions Here....
                                 // Scaling the view...
                                 Animated.timing(scaleValue, {
                                     toValue: showMenu ? 1 : 0.88,
-                                    duration: 300,
+                                    duration: 150,
                                     useNativeDriver: true
                                 })
                                     .start()
 
                                 Animated.timing(offsetValue, {
                                     // YOur Random Value...
-                                    toValue: showMenu ? 0 : 230,
+                                    toValue: showMenu ? 0 : 200,
                                     duration: 300,
+                                    easing: Easing.elastic(1),
                                     useNativeDriver: true
                                 })
                                     .start()
@@ -150,6 +152,7 @@ export function Home({navigation}: NativeStackHeaderProps) {
                                     // YOur Random Value...
                                     toValue: !showMenu ? -30 : 0,
                                     duration: 300,
+                                    easing: Easing.elastic(1),
                                     useNativeDriver: true
                                 })
                                     .start()
@@ -188,8 +191,10 @@ export function Home({navigation}: NativeStackHeaderProps) {
                             hasCheckBox
                             setCategory={handleCategorySelect}
                             categorySelected={category}
+                            scrollEnabled={!showMenu}
                         />
                         <FlatList
+                            scrollEnabled={!showMenu}
                             data={foods}
                             keyExtractor={item => item.id}
                             style={styles.flatList}

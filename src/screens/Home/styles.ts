@@ -67,7 +67,6 @@ export const styles = StyleSheet.create({
     },
     flatList: {
         marginTop: 25,
-        flex: 1,
-        backgroundColor: 'blue'
-    },
+        flex: 1
+    }
 })

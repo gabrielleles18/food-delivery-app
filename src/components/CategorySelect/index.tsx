@@ -9,9 +9,10 @@ type Props = {
     categorySelected: string,
     setCategory: (categoryId: string) => void,
     hasCheckBox?: boolean,
+    scrollEnabled: boolean
 }
 
-export function CategorySelect({categorySelected, setCategory, hasCheckBox = false}: Props) {
+export function CategorySelect({categorySelected, setCategory, hasCheckBox = false, scrollEnabled}: Props) {
 
     const categories = [
         {id: '1', title: 'Foods',},
@@ -26,6 +27,7 @@ export function CategorySelect({categorySelected, setCategory, hasCheckBox = fal
             horizontal
             style={styles.container}
             showsHorizontalScrollIndicator={false}
+            scrollEnabled={scrollEnabled}
         >
             <View style={styles.content}>
                 {
