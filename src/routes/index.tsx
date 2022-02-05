@@ -3,9 +3,9 @@ import {Login} from "../screens/Login";
 import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
 import {Profile} from "../screens/Profile";
-import {FoodDetails} from "../screens/FoodDetails";
+import {Favorites} from "../screens/Favorites";
 import {Cart} from "../screens/Cart";
-import {Delivery} from "../screens/Delivery";
+import {History} from "../screens/History";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
@@ -27,7 +27,7 @@ export function Routes() {
                     tabBarIcon: ({color}) => {
                         const icons = {
                             Fead: 'home',
-                            FoodDetails: 'heart-outline',
+                            Favorites: 'heart-outline',
                             Profile: 'account',
                             History: 'history',
                         };
@@ -44,9 +44,9 @@ export function Routes() {
                 })}
             >
                 <Tab.Screen name='Fead' component={Home}/>
-                <Tab.Screen name='FoodDetails' component={FoodDetails}/>
+                <Tab.Screen name='Favorites' component={Favorites}/>
                 <Tab.Screen name='Profile' component={Profile}/>
-                <Tab.Screen name='History' component={Delivery}/>
+                <Tab.Screen name='History' component={History}/>
             </Tab.Navigator>
         )
     }
