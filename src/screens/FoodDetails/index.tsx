@@ -5,6 +5,7 @@ import Swiper from "react-native-web-swiper";
 import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
 import {Button} from "../../components/Button";
+import {NotFound} from "../../components/NotFound";
 
 export function FoodDetails() {
 

@@ -5,7 +5,8 @@ import {theme} from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
-        paddingTop: getStatusBarHeight()
+        paddingTop: getStatusBarHeight(),
+        flex: 1,
     },
     swiper: {
         width: '100%',
