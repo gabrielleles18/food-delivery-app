@@ -6,9 +6,10 @@ import {theme} from '../../global/styles/theme';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: getStatusBarHeight(),
-        paddingHorizontal: 30,
+        paddingTop: getStatusBarHeight() + 30,
         backgroundColor: theme.colors.gray20,
+        paddingHorizontal: 30,
+        paddingBottom: 30
     },
     containerDetails: {
         flexDirection: 'row',
@@ -16,6 +17,30 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 35,
         marginBottom: 10
+    },
+    boxUser: {
+        backgroundColor: theme.colors.white,
+        paddingHorizontal: 30,
+        paddingVertical: 25,
+        borderRadius: 20,
+        marginBottom: 40
+    },
+    title: {
+        color: theme.colors.black,
+        fontSize: 16,
+        fontFamily: theme.fonts.rounded700,
+        marginBottom: 5,
+    },
+    text: {
+        color: theme.colors.black,
+        fontSize: 15,
+        fontFamily: theme.fonts.rounded600,
+        lineHeight: 17,
+    },
+    devider: {
+        height: 1,
+        backgroundColor: theme.colors.gray40,
+        marginVertical: 8
     },
     details: {
         fontSize: 18,
@@ -27,42 +52,17 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: theme.fonts.rounded600,
     },
-    boxUser: {
-        backgroundColor: theme.colors.white,
-        padding: 18,
-        borderRadius: 20,
-        flexDirection: 'row'
+    total:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 30
     },
-    handles:{
-        flex: 1,
-        marginTop: 13,
-        paddingBottom: 50,
-    },
-    content: {
-        flex: 1
-    },
-    image: {
-        width: 91,
-        height: 100,
-        borderRadius: 10,
-        marginRight: 15
-    },
-    title: {
-        color: theme.colors.black,
-        fontSize: 18,
-        fontFamily: theme.fonts.rounded700,
-        marginBottom: 5,
-        marginTop: 5
-    },
-    text: {
-        color: theme.colors.gray60,
+    textH6:{
         fontSize: 15,
-        fontFamily: theme.fonts.rounded600,
-        lineHeight: 17,
+        fontFamily: theme.fonts.rounded600
     },
-    devider: {
-        height: 1,
-        backgroundColor: theme.colors.gray40,
-        marginVertical: 8
+    value:{
+        fontSize: 17,
+        fontFamily: theme.fonts.rounded700
     }
 })

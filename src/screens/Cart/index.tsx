@@ -7,6 +7,7 @@ import {theme} from '../../global/styles/theme';
 
 import swipePng from '../../assets/swipe.png';
 import {Feather} from "@expo/vector-icons";
+import {Button} from "../../components/Button";
 
 export function Cart() {
     const [counterInput, setCounterInput] = useState(1);
@@ -101,6 +102,9 @@ export function Cart() {
                 )}
                 rightOpenValue={-130}
             />
+            <View style={styles.containerButton}>
+                <Button title='Complete order'/>
+            </View>
         </View>
     )
 }

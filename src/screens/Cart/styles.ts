@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     container: {
         paddingTop: getStatusBarHeight(),
         paddingBottom: 25,
+        flex: 1,
     },
     head: {
         flexDirection: 'row',
@@ -87,5 +88,8 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.segondary90,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    containerButton:{
+        paddingHorizontal: 30
     }
 })
