@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Login} from "../screens/Login";
 import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
@@ -12,9 +12,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
+import {MaterialIcons} from '@expo/vector-icons';
 import {theme} from "../global/styles/theme";
+import {View, Text} from "react-native";
+import {BorderlessButton} from "react-native-gesture-handler";
+
 
 export function Routes() {
+    const [isFavorite, setIsFavorite] = useState(false);
+
     const Stack = createNativeStackNavigator();
     const Tab = createMaterialBottomTabNavigator();
 
@@ -92,12 +98,24 @@ export function Routes() {
                 <Stack.Screen
                     name='FoodDetails'
                     component={FoodDetails}
-                    options={{...optionsScreen, ...{title: ''}}}
+                    options={{
+                        ...optionsScreen,
+                        ...{
+                            title: '',
+                            headerRight: () => (
+                                <View>
+                                    <BorderlessButton onPress={() => (setIsFavorite(!isFavorite))}>
+                                        <MaterialIcons size={22} name={isFavorite ? 'favorite' : 'favorite-border'}/>
+                                    </BorderlessButton>
+                                </View>
+                            )
+                        }
+                    }}
                 />
                 <Stack.Screen
                     name='Delivery'
                     component={Delivery}
-                    options={{...optionsScreen, ...{title: ''}}}
+                    options={{...optionsScreen, ...{title: 'Checkout'}}}
                 />
             </Stack.Navigator>
         </NavigationContainer>
