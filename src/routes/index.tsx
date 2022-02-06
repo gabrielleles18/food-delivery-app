@@ -7,14 +7,28 @@ import {Favorites} from "../screens/Favorites";
 import {Cart} from "../screens/Cart";
 import {History} from "../screens/History";
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import {theme} from "../global/styles/theme";
 
 export function Routes() {
     const Stack = createNativeStackNavigator();
     const Tab = createMaterialBottomTabNavigator();
+
+    const optionsScreen: any = {
+        headerShown: true,
+        headerShadowVisible: false,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+            fontFamily: theme.fonts.rounded700,
+            fontSize: 18,
+            color: theme.colors.black
+        },
+        headerStyle: {
+            backgroundColor: theme.colors.gray20
+        }
+    };
 
     function Tabs() {
         return (
@@ -23,19 +37,18 @@ export function Routes() {
                 inactiveColor={theme.colors.gray55}
                 labeled={false}
                 barStyle={{backgroundColor: 'transparent'}}
-                screenOptions={({route}: any) => ({
+                screenOptions={({route}) => ({
                     tabBarIcon: ({color}) => {
-                        const icons = {
+                        const icons: any = {
                             Fead: 'home',
                             Favorites: 'heart-outline',
                             Profile: 'account',
                             History: 'history',
                         };
-                        let nameIcon = route.name;
 
                         return (
                             <MaterialCommunityIcons
-                                name={icons[nameIcon]}
+                                name={icons[route.name]}
                                 color={color}
                                 size={24}
                             />
@@ -54,10 +67,26 @@ export function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName='Singin'>
-                <Stack.Screen name='Singin' component={Singin} options={{headerShown: false}}/>
-                <Stack.Screen name='Login' component={Login} options={{headerShown: false}}/>
-                <Stack.Screen name='Cart' component={Cart} options={{headerShown: false}}/>
-                <Stack.Screen name='Home' component={Tabs} options={{headerShown: false}}/>
+                <Stack.Screen
+                    name='Singin'
+                    component={Singin}
+                    options={{headerShown: false}}
+                />
+                <Stack.Screen
+                    name='Login'
+                    component={Login}
+                    options={{headerShown: false}}
+                />
+                <Stack.Screen
+                    name='Cart'
+                    component={Cart}
+                    options={optionsScreen}
+                />
+                <Stack.Screen
+                    name='Home'
+                    component={Tabs}
+                    options={{headerShown: false}}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

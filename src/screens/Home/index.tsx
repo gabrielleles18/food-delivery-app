@@ -1,6 +1,5 @@
 import React, {useRef, useState} from "react";
-import {FlatList, ScrollView, SafeAreaView, Text, View, TouchableOpacity, Animated, Easing} from "react-native";
-import {NativeStackHeaderProps} from "@react-navigation/native-stack";
+import {FlatList, ScrollView, Text, View, TouchableOpacity, Animated, Easing} from "react-native";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {Feather, SimpleLineIcons} from "@expo/vector-icons";
 
@@ -10,6 +9,7 @@ import {Food} from "../../components/Food";
 
 import {theme} from "../../global/styles/theme";
 import {styles} from "./styles";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 export function Home({navigation}: NativeStackHeaderProps) {
     const [category, setCategory] = useState('');
@@ -46,44 +46,48 @@ export function Home({navigation}: NativeStackHeaderProps) {
             id: '1',
             title: 'Profile',
             icon: 'user',
-            menu: 'N5,900'
+            menu: 'Profile'
         },
         {
             id: '2',
             title: 'orders',
             icon: 'shopping-bag',
-            menu: 'N1,800'
+            menu: 'Home'
         },
         {
             id: '3',
             title: 'offer and promo',
             icon: 'tag',
-            menu: 'N3,600'
+            menu: 'Home'
         },
         {
             id: '4',
             title: 'Privacy policy',
             icon: 'shopping-bag',
-            menu: 'N3,600'
+            menu: 'Home'
         },
         {
             id: '5',
             title: 'Security',
             icon: 'shield',
-            menu: 'N3,600'
+            menu: 'Home'
         }
-    ]
+    ];
 
     return (
         <View style={styles.container}>
             <View style={styles.menu}>
                 <View style={styles.itens}>
                     {
-                        menuItens.map(menu => (
-                            <TouchableOpacity key={menu.id}>
+                        menuItens &&
+                        menuItens.map((menu: any) => (
+                            <TouchableOpacity
+                                key={menu.id}
+                                onPress={() => navigation.navigate(menu.menu)}
+                            >
                                 <View style={styles.row}>
                                     <Feather
-                                        name={menu.icon.toString()}
+                                        name={menu.icon}
                                         color={theme.colors.black}
                                         size={24}
                                         style={styles.menuIcons}
@@ -95,7 +99,10 @@ export function Home({navigation}: NativeStackHeaderProps) {
                         ))
                     }
                 </View>
-                <TouchableOpacity style={styles.logoff}>
+                <TouchableOpacity
+                    style={styles.logoff}
+                    onPress={() => navigation.navigate('Singin')}
+                >
                     <Text style={[styles.menuTitle, {marginRight: 10}]}>Sign-out</Text>
                     <Feather
                         name="arrow-right"
@@ -118,7 +125,7 @@ export function Home({navigation}: NativeStackHeaderProps) {
                 transform: [
                     {scale: scaleValue},
                     {translateX: offsetValue},
-                    { rotateY: showMenu ? '-15deg' : '0deg'},
+                    {rotateY: showMenu ? '-15deg' : '0deg'},
                 ]
             }}>
                 <Animated.View style={{

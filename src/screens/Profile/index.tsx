@@ -1,5 +1,6 @@
 import React from "react";
 import {Image, ScrollView, Text, View} from "react-native";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 import {styles} from './styles';
 import {Title} from "../../components/Title";
