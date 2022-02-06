@@ -4,6 +4,8 @@ import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
 import {Profile} from "../screens/Profile";
 import {Favorites} from "../screens/Favorites";
+import {FoodDetails} from "../screens/FoodDetails";
+import {Delivery} from "../screens/Delivery";
 import {Cart} from "../screens/Cart";
 import {History} from "../screens/History";
 import {NavigationContainer} from '@react-navigation/native';
@@ -86,6 +88,16 @@ export function Routes() {
                     name='Home'
                     component={Tabs}
                     options={{headerShown: false}}
+                />
+                <Stack.Screen
+                    name='FoodDetails'
+                    component={FoodDetails}
+                    options={{...optionsScreen, ...{title: ''}}}
+                />
+                <Stack.Screen
+                    name='Delivery'
+                    component={Delivery}
+                    options={{...optionsScreen, ...{title: ''}}}
                 />
             </Stack.Navigator>
         </NavigationContainer>

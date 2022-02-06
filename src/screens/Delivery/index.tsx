@@ -10,7 +10,7 @@ import {Title} from "../../components/Title";
 import {theme} from "../../global/styles/theme";
 import {DeliveryMethod} from "../../components/DeliveryMethod";
 
-export function Delivery() {
+export function Delivery({navigation}: NativeStackHeaderProps) {
 
     const deliveryMethod = {
         first: 'Door delivery',
@@ -45,7 +45,7 @@ export function Delivery() {
                     <Text style={styles.textH6}>Total</Text>
                     <Text style={styles.value}>23,00</Text>
                 </View>
-                <Button title='Proceed to payment'/>
+                <Button title='Proceed to payment' onPress={()=> navigation.navigate('Home')}/>
             </View>
         </ScrollView>
     )

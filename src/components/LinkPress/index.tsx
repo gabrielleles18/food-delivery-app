@@ -13,6 +13,7 @@ type Props = RectButtonProps & {
 export function LinkPress({title, isChecked, ...rest}: Props) {
     return (
         <RectButton
+            rippleColor={theme.colors.white}
             style={styles.container}
             {...rest}
         >

@@ -6,29 +6,17 @@ import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
 import {Button} from "../../components/Button";
 import {NotFound} from "../../components/NotFound";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
-export function FoodDetails() {
+export function FoodDetails({route, navigation}: NativeStackHeaderProps) {
 
-    const images = [
-        {
-            id: '1',
-            image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-        },
-        {
-            id: '2',
-            image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-        },
-        {
-            id: '2',
-            image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-        }
-    ];
+    const foodItem: any = route.params;
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
             <View style={styles.swiper}>
                 <Swiper
-                    from={1}
+                    from={0}
                     minDistanceForAction={0.1}
                     timeout={10}
                     controlsProps={{
@@ -39,7 +27,7 @@ export function FoodDetails() {
                     }}
                 >
                     {
-                        images.map(item => (
+                        foodItem.gallery.map((item: any) => (
                             <View style={styles.swiperItem} key={item.id}>
                                 <Image
                                     source={{uri: item.image}}
@@ -51,12 +39,8 @@ export function FoodDetails() {
                 </Swiper>
             </View>
             <View style={styles.content}>
-                <Text style={styles.title}>
-                    Veggie tomato mix
-                </Text>
-                <Text style={styles.price}>
-                    N1, 900
-                </Text>
+                <Text style={styles.title}>{foodItem.title}</Text>
+                <Text style={styles.price}>{foodItem.price}</Text>
 
                 <View style={styles.info}>
                     <Text style={styles.infoTitle}>Delivery info</Text>
@@ -69,8 +53,7 @@ export function FoodDetails() {
                         All our foods are double checked before leaving our stores so by any case
                         you found a broken food please contact our hotline immediately.
                     </Text>
-
-                    <Button title='Add to cart'/>
+                    <Button title='Add to cart' onPress={()=>navigation.navigate('Cart')}/>
                 </View>
             </View>
         </ScrollView>

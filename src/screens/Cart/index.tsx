@@ -8,8 +8,9 @@ import {theme} from '../../global/styles/theme';
 import swipePng from '../../assets/swipe.png';
 import {Feather} from "@expo/vector-icons";
 import {Button} from "../../components/Button";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
-export function Cart() {
+export function Cart({navigation}: NativeStackHeaderProps) {
     const [counterInput, setCounterInput] = useState(1);
 
     const foods = [
@@ -103,7 +104,7 @@ export function Cart() {
                 rightOpenValue={-130}
             />
             <View style={styles.containerButton}>
-                <Button title='Complete order'/>
+                <Button title='Complete order' onPress={()=> navigation.navigate('Delivery')}/>
             </View>
         </View>
     )

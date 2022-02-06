@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     handles:{
         flex: 1,
         marginTop: 13,
-        paddingBottom: 50,
+        paddingBottom: 60,
     },
     content: {
         flex: 1
