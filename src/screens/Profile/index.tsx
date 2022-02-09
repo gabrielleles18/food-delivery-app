@@ -1,12 +1,12 @@
 import React from "react";
 import {Image, ScrollView, Text, View} from "react-native";
-import {NativeStackHeaderProps} from "@react-navigation/native-stack";
+
+import {ButtonNavigator} from "../../components/ButtonNavigator";
+import {Button} from "../../components/Button";
 
 import {styles} from './styles';
 import {Title} from "../../components/Title";
 import userPng from '../../assets/user.png';
-import {ButtonNavigator} from "../../components/ButtonNavigator";
-import {Button} from "../../components/Button";
 
 export function Profile() {
     return (

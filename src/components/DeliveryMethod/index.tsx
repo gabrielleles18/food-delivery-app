@@ -1,12 +1,11 @@
 import React, {useState} from "react";
-import {Image, Text, View} from "react-native";
-import {RectButton, RectButtonProps} from "react-native-gesture-handler";
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+import {Text, View} from "react-native";
+import {RectButtonProps} from "react-native-gesture-handler";
+import {Feather} from "@expo/vector-icons";
+import {RadioButton} from "react-native-paper";
 
 import {styles} from "./styles";
-import {RadioButton} from "react-native-paper";
 import {theme} from "../../global/styles/theme";
-import {Feather} from "@expo/vector-icons";
 
 export type FoodProps = {
     id: string,

@@ -6,8 +6,6 @@ import {MPLUSRounded1c_800ExtraBold} from '@expo-google-fonts/m-plus-rounded-1c'
 import {MPLUSRounded1c_500Medium} from '@expo-google-fonts/m-plus-rounded-1c';
 import {MPLUSRounded1c_700Bold} from '@expo-google-fonts/m-plus-rounded-1c';
 
-import {Delivery} from './src/screens/Delivery';
-
 import {styles} from "./styles";
 import {theme} from './src/global/styles/theme';
 import {Routes} from "./src/routes";

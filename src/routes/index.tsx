@@ -1,4 +1,12 @@
+import {View} from "react-native";
+import {BorderlessButton} from "react-native-gesture-handler";
 import React, {useState} from "react";
+import {NavigationContainer} from '@react-navigation/native';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
+import {MaterialIcons} from '@expo/vector-icons';
+
 import {Login} from "../screens/Login";
 import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
@@ -8,15 +16,8 @@ import {FoodDetails} from "../screens/FoodDetails";
 import {Delivery} from "../screens/Delivery";
 import {Cart} from "../screens/Cart";
 import {History} from "../screens/History";
-import {NavigationContainer} from '@react-navigation/native';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {MaterialCommunityIcons} from '@expo/vector-icons';
-import {MaterialIcons} from '@expo/vector-icons';
-import {theme} from "../global/styles/theme";
-import {View, Text} from "react-native";
-import {BorderlessButton} from "react-native-gesture-handler";
 
+import {theme} from "../global/styles/theme";
 
 export function Routes() {
     const [isFavorite, setIsFavorite] = useState(false);

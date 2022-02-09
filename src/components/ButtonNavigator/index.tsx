@@ -1,10 +1,10 @@
 import React from "react";
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import {RectButton, RectButtonProps} from 'react-native-gesture-handler';
+import {Feather} from "@expo/vector-icons";
 
 import {styles} from './styles';
 import {theme} from "../../global/styles/theme";
-import {Feather} from "@expo/vector-icons";
 
 type Props = RectButtonProps & {
     title: string;

@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: getStatusBarHeight() + 30,
-        backgroundColor: theme.colors.segondary80,
-        color: 'red'
+        backgroundColor: theme.colors.primary,
+        justifyContent: 'space-between'
     },
     logo: {
         width: 73,
@@ -37,12 +37,13 @@ export const styles = StyleSheet.create({
         flex: 1
     },
     contentImageButton: {
-        position: 'relative'
+        flex: 1,
+        justifyContent: 'flex-end'
     },
     containerButton: {
         width: '100%',
         paddingHorizontal: 30,
-        position: 'absolute',
-        bottom: 36
+        marginTop: -60,
+        paddingBottom: 30
     }
 })

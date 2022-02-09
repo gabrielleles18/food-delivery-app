@@ -59,20 +59,6 @@ export const styles = StyleSheet.create({
         color: theme.colors.primary,
         fontFamily: theme.fonts.rounded600,
     },
-    amount: {
-        flexDirection: 'row',
-        backgroundColor: theme.colors.primary,
-        borderRadius: 5,
-        alignItems: 'center',
-    },
-    button: {
-        color: theme.colors.white,
-        paddingHorizontal: 8,
-    },
-    text: {
-        paddingHorizontal: 4,
-        color: theme.colors.white
-    },
     hiddenItem: {
         flex: 1,
         paddingHorizontal: 30,

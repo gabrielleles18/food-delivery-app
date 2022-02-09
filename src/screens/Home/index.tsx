@@ -2,14 +2,16 @@ import React, {useRef, useState} from "react";
 import {FlatList, ScrollView, Text, View, TouchableOpacity, Animated, Easing} from "react-native";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {Feather, SimpleLineIcons} from "@expo/vector-icons";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 import {Search} from "../../components/Search";
 import {CategorySelect} from "../../components/CategorySelect";
 import {Food} from "../../components/Food";
 
+import {menuItens} from '../../data';
+import {foods} from '../../data';
 import {theme} from "../../global/styles/theme";
 import {styles} from "./styles";
-import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 export function Home({navigation}: NativeStackHeaderProps) {
     const [category, setCategory] = useState('');
@@ -21,89 +23,6 @@ export function Home({navigation}: NativeStackHeaderProps) {
     function handleCategorySelect(categoryId: string) {
         setCategory(categoryId);
     }
-
-    const foods = [
-        {
-            id: '1',
-            title: 'Veggie tomato mix',
-            image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-            price: 'N5,900',
-            gallery: [
-                {
-                    id: '1',
-                    image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-                },
-                {
-                    id: '2',
-                    image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-                },
-                {
-                    id: '3',
-                    image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-                }
-            ]
-        },
-        {
-            id: '2',
-            title: 'Egg and cucmber...',
-            image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-            price: 'N1,800',
-            gallery: [
-                {
-                    id: '1',
-                    image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-                }
-            ]
-        },
-        {
-            id: '3',
-            title: 'Moi-moi and ekpa.',
-            image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-            price: 'N3,600',
-            gallery: [
-                {
-                    id: '1',
-                    image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-                },
-                {
-                    id: '2',
-                    image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-                }
-            ]
-        }
-    ]
-    const menuItens = [
-        {
-            id: '1',
-            title: 'Profile',
-            icon: 'user',
-            menu: 'Profile'
-        },
-        {
-            id: '2',
-            title: 'orders',
-            icon: 'shopping-bag',
-            menu: 'Home'
-        },
-        {
-            id: '3',
-            title: 'offer and promo',
-            icon: 'tag',
-            menu: 'Home'
-        },
-        {
-            id: '4',
-            title: 'Privacy policy',
-            icon: 'shopping-bag',
-            menu: 'Home'
-        },
-        {
-            id: '5',
-            title: 'Security',
-            icon: 'shield',
-            menu: 'Home'
-        }
-    ];
 
     return (
         <View style={styles.container}>

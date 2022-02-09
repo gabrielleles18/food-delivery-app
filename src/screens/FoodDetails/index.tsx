@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import {FlatList, Image, ScrollView, Text, TouchableOpacity, View} from "react-native";
+import { Image, ScrollView, Text, View} from "react-native";
 import Swiper from "react-native-web-swiper";
+import {NativeStackHeaderProps} from "@react-navigation/native-stack";
+
+import {Button} from "../../components/Button";
 
 import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
-import {Button} from "../../components/Button";
-import {NotFound} from "../../components/NotFound";
-import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
 export function FoodDetails({route, navigation}: NativeStackHeaderProps) {
 
@@ -53,7 +53,7 @@ export function FoodDetails({route, navigation}: NativeStackHeaderProps) {
                         All our foods are double checked before leaving our stores so by any case
                         you found a broken food please contact our hotline immediately.
                     </Text>
-                    <Button title='Add to cart' onPress={()=>navigation.navigate('Cart')}/>
+                    <Button title='Add to cart' onPress={() => navigation.navigate('Cart', foodItem)}/>
                 </View>
             </View>
         </ScrollView>

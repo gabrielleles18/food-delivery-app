@@ -1,14 +1,12 @@
 import React, {useState} from "react";
-import {Image, ScrollView, Text, View} from "react-native";
+import {ScrollView, Text, View} from "react-native";
 import {NativeStackHeaderProps} from '@react-navigation/native-stack';
-import {RadioButton} from 'react-native-paper';
 
+import {Title} from "../../components/Title";
+import {DeliveryMethod} from "../../components/DeliveryMethod";
 import {Button} from "../../components/Button";
 
 import {styles} from './styles';
-import {Title} from "../../components/Title";
-import {theme} from "../../global/styles/theme";
-import {DeliveryMethod} from "../../components/DeliveryMethod";
 
 export function Delivery({navigation}: NativeStackHeaderProps) {
 

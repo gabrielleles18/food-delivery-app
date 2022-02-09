@@ -1,12 +1,13 @@
 import React, {useState} from "react";
-import {Image, ScrollView, Text, TextInput, View} from "react-native";
+import {Image, ScrollView, Text, View} from "react-native";
 import {NativeStackHeaderProps} from "@react-navigation/native-stack";
 
-import iconPng from '../../assets/icon.png';
-import {styles} from './styles';
 import {LinkPress} from "../../components/LinkPress";
 import {Input} from "../../components/Input";
 import {Button} from "../../components/Button";
+
+import iconPng from '../../assets/icon.png';
+import {styles} from './styles';
 
 export function Login({navigation}: NativeStackHeaderProps) {
     const [isCheckedLogin, setIsCheckedLogin] = useState(true);

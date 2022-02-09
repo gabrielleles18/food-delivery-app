@@ -1,13 +1,13 @@
 import React from "react";
 import {Text, View} from "react-native";
+import {Feather} from "@expo/vector-icons";
 
 import {styles} from "./styles";
-import {Feather} from "@expo/vector-icons";
 
 export type Props = {
     title: string,
     subTitle: string,
-    icon: string
+    icon: any
 }
 
 export function NotFound({title, subTitle, icon}: Props) {
