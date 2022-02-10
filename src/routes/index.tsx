@@ -10,6 +10,7 @@ import {MaterialIcons} from '@expo/vector-icons';
 import {Login} from "../screens/Login";
 import {Singin} from "../screens/Singin";
 import {Home} from "../screens/Home";
+import {Search} from "../screens/Search";
 import {Profile} from "../screens/Profile";
 import {Favorites} from "../screens/Favorites";
 import {FoodDetails} from "../screens/FoodDetails";
@@ -117,6 +118,11 @@ export function Routes() {
                     name='Delivery'
                     component={Delivery}
                     options={{...optionsScreen, ...{title: 'Checkout'}}}
+                />
+                <Stack.Screen
+                    name='Search'
+                    component={Search}
+                    options={{...optionsScreen, ...{title: 'Search'}}}
                 />
             </Stack.Navigator>
         </NavigationContainer>

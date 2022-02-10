@@ -8,14 +8,15 @@ export type FoodProps = {
     id: string,
     title: string,
     image: string,
-    price: string,
+    price: string
 }
 
 type Props = RectButtonProps & {
     data: FoodProps,
+    widthContent?: number
 }
 
-export function Food({data, ...rest}: Props) {
+export function Food({data, widthContent, ...rest}: Props) {
 
     return (
         <View style={styles.container}>
@@ -25,8 +26,8 @@ export function Food({data, ...rest}: Props) {
                     style={styles.image}
                 />
             </View>
-            <View style={styles.content}>
-                <RectButton {...rest} style={{width: '100%'}} >
+            <View style={[styles.content, {width: widthContent ? widthContent : 156}]}>
+                <RectButton {...rest} style={{width: '100%'}}>
                     <Text style={styles.title}>{data.title}</Text>
                     <Text style={styles.price}>{data.price}</Text>
                 </RectButton>

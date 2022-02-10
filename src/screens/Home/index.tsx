@@ -141,7 +141,7 @@ export function Home({navigation}: NativeStackHeaderProps) {
                             <Text style={styles.title}>
                                 Deliciouss {'\n'}Food for you
                             </Text>
-                            <Search/>
+                            <Search navigation={navigation}/>
                         </View>
 
                         <CategorySelect

@@ -10,7 +10,7 @@ import {Button} from "../../components/Button";
 import swipePng from '../../assets/swipe.png';
 import {styles} from "./styles";
 import {theme} from '../../global/styles/theme';
-import {foods} from '../../data';
+import {foodsCard} from '../../data';
 
 export function Cart({navigation}: NativeStackHeaderProps) {
     const [isFavorite, setIsFavorite] = useState(false);
@@ -26,7 +26,7 @@ export function Cart({navigation}: NativeStackHeaderProps) {
                 <Text style={styles.textSwipe}>Swipe on an item to delete</Text>
             </View>
             <SwipeListView
-                data={foods}
+                data={foodsCard}
                 renderItem={(data: any, rowMap) => (
                     <View style={styles.containerItem}>
                         <View style={styles.item}>
