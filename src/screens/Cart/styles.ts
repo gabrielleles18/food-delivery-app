@@ -43,7 +43,9 @@ export const styles = StyleSheet.create({
         borderRadius: 69,
         marginRight: 16
     },
-    content: {},
+    content: {
+        flex: 1
+    },
     title: {
         fontSize: 17,
         color: theme.colors.black,
@@ -51,6 +53,7 @@ export const styles = StyleSheet.create({
         marginBottom: 5
     },
     priceAmount: {
+        width: 181,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },

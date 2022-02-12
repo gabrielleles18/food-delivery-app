@@ -1,9 +1,9 @@
 export const foods = [
     {
         id: '1',
-        title: 'Veggie tomato mix',
-        image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-        price: 'N5,900',
+        title: 'Barca de sushi',
+        image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg',
+        price: 'R$ 159,90',
         gallery: [
             {
                 id: '1',
@@ -11,51 +11,55 @@ export const foods = [
             },
             {
                 id: '2',
-                image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
+                image: 'https://st3.depositphotos.com/8551838/15987/i/1600/depositphotos_159877688-stock-photo-japan-food-boat.jpg',
             },
             {
                 id: '3',
-                image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
+                image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/4b/03/aa/combinado-variado.jpg',
             }
         ]
     },
     {
         id: '2',
-        title: 'Egg and cucmber...',
-        image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-        price: 'N1,800',
+        title: 'Ceviche de camarão',
+        image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
+        price: 'R$ 89,00',
         gallery: [
             {
                 id: '1',
-                image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
+                image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
+            },
+            {
+                id: '2',
+                image: 'https://s2.glbimg.com/dizNNcLn7kUyhf-A1vgrRRpwWPg=/0x0:620x385/984x0/smart/filters:strip_icc()/g.glbimg.com/og/gs/gsat5/f/thumbs/materia/2015/02/28/Ceviche_de_salm%C3%A3o_com_camar%C3%A3o.jpg',
             }
         ]
     },
     {
         id: '3',
-        title: 'Moi-moi and ekpa.',
-        image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-        price: 'N3,600',
+        title: 'Costela suina',
+        image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
+        price: 'R$ 49,90',
         gallery: [
             {
                 id: '1',
-                image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
+                image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
             },
             {
                 id: '2',
-                image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
+                image: 'https://defumadosganchinho.com.br/wp-content/uploads/2020/04/costela-de-porco-com-molho-barbecue.jpg',
             }
         ]
     },
     {
         id: '4',
-        title: 'Egg and cucmber...',
-        image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-        price: 'N1,800',
+        title: 'Moqueca de lagosta',
+        image: 'https://media.gazetadopovo.com.br/vozes/2017/12/moqueca-lagosta-900x600-de56c64a.jpg',
+        price: 'R$ 68,99',
         gallery: [
             {
                 id: '1',
-                image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
+                image: 'https://media.gazetadopovo.com.br/vozes/2017/12/moqueca-lagosta-900x600-de56c64a.jpg',
             }
         ]
     }
@@ -64,31 +68,31 @@ export const foods = [
 export const menuItens = [
     {
         id: '1',
-        title: 'Profile',
+        title: 'Perfil',
         icon: 'user',
         menu: 'Profile'
     },
     {
         id: '2',
-        title: 'orders',
+        title: 'Pedidos',
         icon: 'shopping-bag',
         menu: 'Home'
     },
     {
         id: '3',
-        title: 'offer and promo',
+        title: 'Promoções',
         icon: 'tag',
         menu: 'Home'
     },
     {
         id: '4',
-        title: 'Privacy policy',
+        title: 'Política de Privacidade',
         icon: 'shopping-bag',
         menu: 'Home'
     },
     {
         id: '5',
-        title: 'Security',
+        title: 'Segurança',
         icon: 'shield',
         menu: 'Home'
     }
@@ -97,9 +101,9 @@ export const menuItens = [
 export const foodsCard = [
     {
         id: '1',
-        title: 'Veggie tomato mix',
-        image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
-        price: 'N5,900',
+        title: 'Barca de sushi',
+        image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg',
+        price: 'R$ 159,90',
         gallery: [
             {
                 id: '1',
@@ -107,39 +111,43 @@ export const foodsCard = [
             },
             {
                 id: '2',
-                image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
+                image: 'https://st3.depositphotos.com/8551838/15987/i/1600/depositphotos_159877688-stock-photo-japan-food-boat.jpg',
             },
             {
                 id: '3',
-                image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
+                image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/4b/03/aa/combinado-variado.jpg',
             }
         ]
     },
     {
         id: '2',
-        title: 'Egg and cucmber...',
-        image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
-        price: 'N1,800',
+        title: 'Ceviche de camarão',
+        image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
+        price: 'R$ 89,00',
         gallery: [
             {
                 id: '1',
-                image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
+                image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
+            },
+            {
+                id: '2',
+                image: 'https://s2.glbimg.com/dizNNcLn7kUyhf-A1vgrRRpwWPg=/0x0:620x385/984x0/smart/filters:strip_icc()/g.glbimg.com/og/gs/gsat5/f/thumbs/materia/2015/02/28/Ceviche_de_salm%C3%A3o_com_camar%C3%A3o.jpg',
             }
         ]
     },
     {
         id: '3',
-        title: 'Moi-moi and ekpa.',
-        image: 'https://www.vinhocapital.com/wp-content/uploads/2018/10/Bandeja-Paisa_La-Rubia-Caf%C3%A9_Foto-de-Raquel-Aviani-1030x683.jpg',
-        price: 'N3,600',
+        title: 'Costela suina',
+        image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
+        price: 'R$ 49,90',
         gallery: [
             {
                 id: '1',
-                image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg ',
+                image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
             },
             {
                 id: '2',
-                image: 'https://fortissima.com.br/wp-content/uploads/2015/03/comida-peruana-tt-width-640-height-420-bgcolor-FFFFFF.jpg',
+                image: 'https://defumadosganchinho.com.br/wp-content/uploads/2020/04/costela-de-porco-com-molho-barbecue.jpg',
             }
         ]
     }
