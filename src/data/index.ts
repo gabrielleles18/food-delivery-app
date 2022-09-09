@@ -1,7 +1,7 @@
 export const foods = [
     {
         id: '1',
-        title: 'Barca de sushi',
+        title: 'Barca de Sushi',
         image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg',
         price: 'R$ 159,90',
         gallery: [
@@ -21,7 +21,7 @@ export const foods = [
     },
     {
         id: '2',
-        title: 'Ceviche de camarão',
+        title: 'Ceviche de Camarão',
         image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
         price: 'R$ 89,00',
         gallery: [
@@ -37,7 +37,7 @@ export const foods = [
     },
     {
         id: '3',
-        title: 'Costela suina',
+        title: 'Costela Suína',
         image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
         price: 'R$ 49,90',
         gallery: [
@@ -53,7 +53,7 @@ export const foods = [
     },
     {
         id: '4',
-        title: 'Moqueca de lagosta',
+        title: 'Moqueca de Lagosta',
         image: 'https://media.gazetadopovo.com.br/vozes/2017/12/moqueca-lagosta-900x600-de56c64a.jpg',
         price: 'R$ 68,99',
         gallery: [
@@ -101,7 +101,7 @@ export const menuItens = [
 export const foodsCard = [
     {
         id: '1',
-        title: 'Barca de sushi',
+        title: 'Barca de Sushi',
         image: 'https://blog.duogourmet.com.br/wp-content/uploads/2019/07/37-Duo-Gourmet-sushi.jpg',
         price: 'R$ 159,90',
         gallery: [
@@ -121,7 +121,7 @@ export const foodsCard = [
     },
     {
         id: '2',
-        title: 'Ceviche de camarão',
+        title: 'Ceviche de Camarão',
         image: 'https://s2.glbimg.com/fKbEnPYQ2q1Kz7WTOuaHxjlH7cw=/e.glbimg.com/og/ed/f/original/2021/02/23/porto_frescatto_ceviche_de_camaroes_e_peixe_branco_credito_tomas_rangel.jpg',
         price: 'R$ 89,00',
         gallery: [
@@ -137,7 +137,7 @@ export const foodsCard = [
     },
     {
         id: '3',
-        title: 'Costela suina',
+        title: 'Costela Suína',
         image: 'https://espetinhodesucesso.com.br/wp-content/uploads/2021/12/Como-fazer-costela-com-molho-barbecue-1200x900.jpg',
         price: 'R$ 49,90',
         gallery: [
